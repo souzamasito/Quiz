@@ -74,3 +74,14 @@ function sortearPergunta(maxPerguntas){
     }
     }
 }
+
+$('.resposta').click(function(){
+    //PERCORRER TODAS AS RESPOSTAS E DESMARCAR A CLASSE SELECIONADA
+    $('.resposta').each(function(){
+        if($(this).hasClass('selecionada')){
+            $(this).removeClass('selecionada');
+        }
+    })
+    //ADICIONAR A CLASSE SELECIONADA
+    $(this).addClass('selecionada');
+});

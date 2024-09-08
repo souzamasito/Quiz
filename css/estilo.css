@@ -16,6 +16,7 @@ button{
     display: block;
     width: 300px;
     padding: 10px;
+    border: none
 }
 .resposta{
     margin:auto auto;
@@ -25,10 +26,23 @@ button{
 #confirm{
     margin: auto auto;
     background: #11b411;
-    border: none;
     color: white;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.resposta{
+    margin:auto auto;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+.resposta:hover{
+    background: yellow;
+}
+
+.resposta.selecionada{
+    background: #c9c9f6;
 }
 
 #confirm:hover{
