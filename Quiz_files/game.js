@@ -35,35 +35,5 @@ sortearPergunta(qtdPerguntas);
 function sortearPergunta(maxPerguntas){
     //GERAR UM NÚMERO ALEATÓRIO
     let aleatorio = (Math.random() * maxPerguntas).toFixed();
-    //CONVERTER PARA NÚMERO
-    aleatorio = Number(aleatorio);
-    //MOSTRAR NO CONSOLE QUAL FOI A PERGUNTA SORTEADA
-    console.log('A pergunta sorteada foi a: ' + aleatorio);
-
-    //VERIFICAR SE A PERGUNTA SORTEADA JÁ FOI FEITA
-    if(!perguntasFeitas.includes(aleatorio)) {
-            //COLOCAR COMO PERGUNTA FEITA
-            perguntasFeitas.push(aleatorio);
-
-            //PREENCHER O HTML COM OS DADOS DA QUESTAO SORTEADA
-            var p_selecionada = pergunta[aleatorio].pergunta;
-            console.log(p_selecionada);
-
-            //ALIMENTAR A PERGUNTA VINDA DO SORTEIO
-            $('#pergunta').html(p_selecionada);
-
-            //ALIMENTAR AS RESPOSTAS VINDAS DO SORTEIO
-            for(var i =0 ; i < 4; i++){
-                $('#resp' + i).html(pergunta[aleatorio].respostas[i]);
-            }
-
-    //EMBARALHAR AS RESPOSTAS
-    var pai = $('#respostas');
-    var botoes = pai.children();
-
-    for (var i = 1; i < botoes.length; i++){
-        pai.append(botoes.eq(Math.floor(Math.random() * botoes.length)));
-    }
-
-    }
+    console.log(aleatorio);
 }
