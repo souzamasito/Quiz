@@ -64,6 +64,13 @@ function sortearPergunta(maxPerguntas){
     for (var i = 1; i < botoes.length; i++){
         pai.append(botoes.eq(Math.floor(Math.random() * botoes.length)));
     }
-
+}else{
+    //SE A PERGUNTA JÁ FOI FEITA, CHAMAR A FUNÇÃO NOVAMENTE
+    console.log('Pergunta já foi feita. Sorteando novamente...');
+    if(perguntasFeitas.length <= maxPerguntas +1){
+        return sortearPergunta(maxPerguntas);
+    }else{
+        console.log('Todas as perguntas já foram feitas');
+    }
     }
 }
